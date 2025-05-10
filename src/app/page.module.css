@@ -5,4 +5,13 @@
 }
 .navbar span {
   background-color: red;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+.navbar span:hover {
+  background-color: aqua;
 }
