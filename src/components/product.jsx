@@ -1,12 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import styles from "./product.css";
 
 function ProductList() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch products from the Fake Store API
     fetch("https://fakestoreapi.com/products")
       .then((response) => response.json())
       .then((data) => {
@@ -23,7 +23,6 @@ function ProductList() {
 
   return (
     <div>
-      <h2>Product List</h2>
       <ul>
         {products.map((product) => (
           <li key={product.id}>
@@ -34,6 +33,7 @@ function ProductList() {
               alt={product.title}
               style={{ width: "100px" }}
             />
+            <button>see more</button>
           </li>
         ))}
       </ul>
