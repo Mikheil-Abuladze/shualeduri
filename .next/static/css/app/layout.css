@@ -112,3 +112,24 @@ a {
   }
 }
 
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/components/navbar.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+header {
+  margin: 50px;
+  display: flex;
+  gap: 40px;
+}
+span {
+  background-color: red;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+span:hover {
+  background-color: aqua;
+}
+

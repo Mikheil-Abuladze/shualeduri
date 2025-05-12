@@ -9,9 +9,7 @@ import Navbar from "@/components/navbar";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Navbar/>
       <ProductList />
-      <Footer />
     </div>
   );
 }
