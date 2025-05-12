@@ -4,15 +4,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import ProductList from "../components/product";
 import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <header className={styles.navbar}>
-        <span>products</span>
-        <span>profile</span>
-        <span>cart</span>
-      </header>
+      <Navbar/>
       <ProductList />
       <Footer />
     </div>
