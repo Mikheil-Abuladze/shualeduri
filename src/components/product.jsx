@@ -26,12 +26,13 @@ function ProductList() {
       <ul>
         {products.map((product) => (
           <li key={product.id}>
-            <h3>{product.title}</h3>
+            <h4>{product.title}</h4>
             <p>Price: ${product.price}</p>
             <img
               src={product.image}
               alt={product.title}
               style={{ width: "100px" }}
+              style={{ height: "100px" }}
             />
             <button>see more</button>
           </li>
