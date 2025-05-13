@@ -1,14 +1,14 @@
+"use client"
 import React from "react";
 import styles from "./navbar.css";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+export default function Navbar() {
   return (
-    <header className={styles.navbar}>
-      <span>products</span>
-      <span>profile</span>
-      <span>cart</span>
-    </header>
+    <nav className="p-4">
+      <Link to="/product" className="mr-4">Product</Link>
+      <Link to="/profile" className="mr-4">Profile</Link>
+      <Link to="/cart" className="mr-4">Cart</Link>
+    </nav>
   );
-};
-
-export default Navbar;
+}

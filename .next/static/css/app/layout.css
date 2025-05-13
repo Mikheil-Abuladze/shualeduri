@@ -66,6 +66,27 @@
 }.__variable_9a8899 {--font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'
 }
 
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/components/navbar.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+.p-4{
+  margin: 50px;
+  display: flex;
+  gap: 40px;
+}
+.mr-4 {
+  background-color: red;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+.smr-4pan :hover {
+  background-color: aqua;
+}
+
 /*!*****************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/globals.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************/
@@ -110,26 +131,5 @@ a {
   html {
     color-scheme: dark;
   }
-}
-
-/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/components/navbar.css ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************/
-header {
-  margin: 50px;
-  display: flex;
-  gap: 40px;
-}
-span {
-  background-color: red;
-  width: 100px;
-  height: 30px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  border-radius: 5px;
-}
-span:hover {
-  background-color: aqua;
 }
 
