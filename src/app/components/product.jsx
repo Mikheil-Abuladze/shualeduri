@@ -1,10 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import styles from "./product.css";
+import { useRouter } from "next/navigation";
 
 export default function ProductList() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -34,7 +36,9 @@ export default function ProductList() {
               style={{ width: "100px" }}
               style={{ height: "100px" }}
             />
-            <button>see more</button>
+            <button onClick={() => router.push(`/products/${product.id}`)}>
+              see more
+            </button>
           </li>
         ))}
       </ul>
