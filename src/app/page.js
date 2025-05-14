@@ -9,6 +9,7 @@ import {
 import Navbar from "./components/navbar";
 import ProductList from "./components/product";
 import Profile from "./components/profile";
+import Cart from "./components/cart";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
           <Route path="/" element={<Navigate to="/product" />} />
           <Route path="/product" element={<ProductList />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </Suspense>
     </Router>
