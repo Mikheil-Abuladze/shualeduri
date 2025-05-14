@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import styles from "./cart.css";
+import styles from "./cart.css"
 
 export default function Cart() {
   const [cartItems, setCartItems] = useState([]);
@@ -46,9 +46,7 @@ export default function Cart() {
   const increaseQuantity = (index) => {
     setCartItems((prev) =>
       prev.map((item, i) =>
-        i === index
-          ? { ...item, quantity: Math.min(item.quantity + 1, 10) }
-          : item
+        i === index ? { ...item, quantity: Math.min(item.quantity + 1, 10) } : item
       )
     );
   };
@@ -57,9 +55,7 @@ export default function Cart() {
   const decreaseQuantity = (index) => {
     setCartItems((prev) =>
       prev.map((item, i) =>
-        i === index
-          ? { ...item, quantity: Math.max(item.quantity - 1, 1) }
-          : item
+        i === index ? { ...item, quantity: Math.max(item.quantity - 1, 1) } : item
       )
     );
   };
@@ -72,11 +68,7 @@ export default function Cart() {
       <h1 className="text-xl">Cart Details</h1>
       {cartItems.map((item, index) => (
         <div key={index} className="p-2 border-b flex items-center gap-4">
-          <img
-            src={item.image}
-            alt={item.name}
-            className="w-16 h-16 object-cover"
-          />
+          <img src={item.image} alt={item.name} className="w-16 h-16 object-cover" />
           <div className="flex-1">
             <p>{item.name}</p>
             <p>Price: ${item.price}</p>
