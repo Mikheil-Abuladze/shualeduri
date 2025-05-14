@@ -1,10 +1,10 @@
 .w-16 {
-  width: 2px;
+  width: 100px;
 }
 .p-1 {
-  width: 100px;
-  height: 100px;
+  width: 30px;
+  height: 20px;
 }
-.p-1 bg-red-500 text-white rounded{
+.p-1 bg-red-500 text-white rounded {
   background-color: red;
 }
