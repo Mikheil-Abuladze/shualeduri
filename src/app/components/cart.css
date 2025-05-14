@@ -1,3 +1,10 @@
-img {
-  width: 50px;
+.w-16 {
+  width: 2px;
+}
+.p-1 {
+  width: 100px;
+  height: 100px;
+}
+.p-1 bg-red-500 text-white rounded{
+  background-color: red;
 }

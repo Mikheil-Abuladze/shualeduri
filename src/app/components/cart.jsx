@@ -42,6 +42,28 @@ export default function Cart() {
     fetchCartData();
   }, []);
 
+  // Increase quantity (up to 10)
+  const increaseQuantity = (index) => {
+    setCartItems((prev) =>
+      prev.map((item, i) =>
+        i === index
+          ? { ...item, quantity: Math.min(item.quantity + 1, 10) }
+          : item
+      )
+    );
+  };
+
+  // Decrease quantity (down to 1)
+  const decreaseQuantity = (index) => {
+    setCartItems((prev) =>
+      prev.map((item, i) =>
+        i === index
+          ? { ...item, quantity: Math.max(item.quantity - 1, 1) }
+          : item
+      )
+    );
+  };
+
   if (loading) return <div>Loading...</div>;
   if (!cartItems.length) return <div>No items in the cart.</div>;
 
@@ -50,12 +72,30 @@ export default function Cart() {
       <h1 className="text-xl">Cart Details</h1>
       {cartItems.map((item, index) => (
         <div key={index} className="p-2 border-b flex items-center gap-4">
-          <img src={item.image} alt={item.name} className="w-16 h-16 object-cover" />
-          <div>
+          <img
+            src={item.image}
+            alt={item.name}
+            className="w-16 h-16 object-cover"
+          />
+          <div className="flex-1">
             <p>{item.name}</p>
-            <p>Quantity: {item.quantity}</p>
             <p>Price: ${item.price}</p>
-            <p>Total: ${item.price * item.quantity}</p>
+            <p>Total: ${(item.price * item.quantity).toFixed(2)}</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => decreaseQuantity(index)}
+              className="p-1 bg-red-500 text-white rounded"
+            >
+              -
+            </button>
+            <span>{item.quantity}</span>
+            <button
+              onClick={() => increaseQuantity(index)}
+              className="p-1 bg-green-500 text-white rounded"
+            >
+              +
+            </button>
           </div>
         </div>
       ))}
