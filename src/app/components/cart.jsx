@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import styles from "./cart.css";
 
 export default function Cart() {
   const [cartItems, setCartItems] = useState([]);
