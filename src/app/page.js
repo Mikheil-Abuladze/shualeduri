@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Navbar from "./components/navbar";
 import ProductList from "./components/product";
+import Profile from "./components/profile";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Routes>
           <Route path="/" element={<Navigate to="/product" />} />
           <Route path="/product" element={<ProductList />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </Suspense>
     </Router>
